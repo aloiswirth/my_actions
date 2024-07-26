@@ -40,7 +40,7 @@ jobs:
         uses: actions/setup-python@v5.1.1
         with:
           # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
-          python-version: 3.13
+          python-version: 3.3.13.0-beta.4
           # # File containing the Python version to use. Example: .python-version
           # python-version-file: # optional
           # # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
