@@ -11,7 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
-      - run: echo lsb_release –a 
+
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: list Files in Repo
+        run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          lsb_release -a
+          tree 
+
       
 
   
