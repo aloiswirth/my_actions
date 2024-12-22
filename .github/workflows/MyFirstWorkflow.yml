@@ -10,8 +10,8 @@ jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
     steps:
-      - run echo "👋 Hello World!"
-      - run echo lsb_release –a 
+      - run: echo "Hello World!"
+      
 
   
   
