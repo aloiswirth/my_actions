@@ -19,8 +19,8 @@ jobs:
       - name: Create certificate renewal issue
         # uses: JasonEtco/create-an-issue@v2
         uses: peter-evans/create-issue-from-file@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Certificate Renewal Reminder'
           content-filepath: renew-certificate.md
 
