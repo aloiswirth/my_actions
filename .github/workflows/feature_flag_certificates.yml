@@ -1,0 +1,38 @@
+name: Recurring Issue Creator
+
+on:
+  schedule:
+    - cron: '50 14 14 4 *'   # January 1st at 10:00 UTC (cert renewal)
+#    - cron: '3 4 2 * *'      # Every second of of a month at 04 hours and 03 minutes. 
+  workflow_dispatch:       # Optional: allows manual triggering
+
+jobs:
+  cert_renewal:
+#    if: github.event.schedule == '50 14 14 4 *' 
+    runs-on: [self-hosted, solinas]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create certificate renewal issue
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/ISSUE_TEMPLATE/renew-certificate.md
+
+  # maintenance:
+  #   if: github.event.schedule == '0 9 2 * *'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repo
+  #       uses: actions/checkout@v4
+
+  #     - name: Create maintenance issue
+  #       uses: JasonEtco/create-an-issue@v2
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         filename: .github/ISSUE_TEMPLATE/update-requirements.md
