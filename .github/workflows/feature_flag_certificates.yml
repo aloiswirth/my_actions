@@ -9,7 +9,7 @@ on:
 jobs:
   cert_renewal:
 #    if: github.event.schedule == '50 14 14 4 *' 
-    runs-on: [self-hosted, solinas]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
