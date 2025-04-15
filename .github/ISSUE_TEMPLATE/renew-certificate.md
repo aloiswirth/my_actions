@@ -1,8 +1,6 @@
 ---
-name: "Renew Feature Certificates Every Year"
-title: "Renew SSL Certificate"
-labels: "maintenance"
-assignees: "D022785"
-about: "Template for renewing SSL certificates annually."
+title: Someone just pushed
+assignees: JasonEtco, matchai
+labels: bug, enhancement
 ---
-
+Someone just pushed, oh no! Here's who did it: {{ payload.sender.login }}.

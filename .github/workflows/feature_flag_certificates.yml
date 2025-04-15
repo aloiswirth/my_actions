@@ -23,16 +23,3 @@ jobs:
         with:
           filename: .github/ISSUE_TEMPLATE/renew-certificate.md
 
-  # maintenance:
-  #   if: github.event.schedule == '0 9 2 * *'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v4
-
-  #     - name: Create maintenance issue
-  #       uses: JasonEtco/create-an-issue@v2
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         filename: .github/ISSUE_TEMPLATE/update-requirements.md
