@@ -1,6 +1,7 @@
 ---
-title: Someone just pushed
-assignees: JasonEtco, matchai
-labels: bug, enhancement
+title: An example issue
+content-filepath: .github/ISSUE_TEMPLATE/renew-certificate.md
+labels:
+  - report
+  - automated issue
 ---
-Someone just pushed, oh no! Here's who did it: {{ payload.sender.login }}.
